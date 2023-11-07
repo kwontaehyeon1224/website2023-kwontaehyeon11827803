@@ -1,0 +1,59 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.gallery {
+    
+    display: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    background-color: #716464;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 60%;
+    height: auto;
+}
+
+.gallery-item p {
+    margin: 10px 0;
+}
+
+
+/* 초기에 숨겨진 이미지 스타일 */
+.gallery-item img {
+    opacity: 0; /* 이미지를 처음에 숨깁니다. */
+    transition: opacity 0.3s; /* 부드러운 전환을 위한 설정 */
+}
+
+/* 호버 효과에 따라 이미지 나타나게 함 */
+.gallery-item:hover img {
+    opacity: 1; /* 이미지가 호버될 때 나타납니다. */
+}
+/* 이미지에 호버 효과를 추가 */
+.gallery-item img:hover {
+    transform: translateY(-10px); /* 이미지가 스크롤되면 위로 이동 */
+    transition: transform 0.3s; /* 부드러운 전환을 위한 설정 */
+}
